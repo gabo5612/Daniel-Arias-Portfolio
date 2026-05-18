@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ─── Design Token: Colors (Aethelred Noir) ─────────────────────────── */
+@theme {
+  --color-background:                 #131313;
+  --color-surface:                    #131313;
+  --color-surface-dim:                #131313;
+  --color-surface-container:          #20201f;
+  --color-surface-container-low:      #1c1b1b;
+  --color-surface-container-lowest:   #0e0e0e;
+  --color-surface-container-high:     #2a2a2a;
+  --color-surface-container-highest:  #353535;
+  --color-surface-bright:             #393939;
+  --color-surface-variant:            #353535;
+  --color-on-surface:                 #e5e2e1;
+  --color-on-background:              #e5e2e1;
+  --color-on-surface-variant:         #c4c7c7;
+  --color-primary:                    #c9c6c5;
+  --color-primary-fixed:              #e5e2e1;
+  --color-primary-fixed-dim:          #c9c6c5;
+  --color-on-primary:                 #313030;
+  --color-on-primary-fixed:           #1c1b1b;
+  --color-on-primary-fixed-variant:   #474646;
+  --color-on-primary-container:       #7b7979;
+  --color-primary-container:          #0a0a0a;
+  --color-secondary:                  #ffb4a8;
+  --color-secondary-container:        #bc0000;
+  --color-secondary-fixed:            #ffdad4;
+  --color-secondary-fixed-dim:        #ffb4a8;
+  --color-on-secondary:               #690000;
+  --color-on-secondary-container:     #ffc8bf;
+  --color-on-secondary-fixed:         #410000;
+  --color-on-secondary-fixed-variant: #930000;
+  --color-outline:                    #8e9192;
+  --color-outline-variant:            #444748;
+  --color-inverse-surface:            #e5e2e1;
+  --color-inverse-on-surface:         #313030;
+  --color-inverse-primary:            #5f5e5e;
+  --color-surface-tint:               #c9c6c5;
+  --color-error:                      #ffb4ab;
+  --color-error-container:            #93000a;
+  --color-on-error:                   #690005;
+  --color-on-error-container:         #ffdad6;
+  --color-tertiary:                   #c6c6c7;
+  --color-tertiary-fixed:             #e2e2e2;
+  --color-tertiary-fixed-dim:         #c6c6c7;
+  --color-tertiary-container:         #080a0a;
+  --color-on-tertiary:                #2f3131;
+  --color-on-tertiary-container:      #78797a;
+  --color-on-tertiary-fixed:          #1a1c1c;
+  --color-on-tertiary-fixed-variant:  #454747;
+
+  /* ─── Spacing ─────────────────────────────────────────────────────── */
+  --spacing-unit:               8px;
+  --spacing-section-gap:        160px;
+  --spacing-gutter:             32px;
+  --spacing-margin-desktop:     80px;
+  --spacing-container-max-width:1440px;
+  --spacing-margin-mobile:      24px;
 }
 
+/* ─── Font families linked to CSS vars injected by next/font/google ─── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display-lg:   var(--font-bodoni), serif;
+  --font-display-lg-mobile: var(--font-bodoni), serif;
+  --font-headline-lg:  var(--font-bodoni), serif;
+  --font-headline-xl:  var(--font-bodoni), serif;
+  --font-label-caps:   var(--font-hanken), sans-serif;
+  --font-body-lg:      var(--font-hanken), sans-serif;
+  --font-body-md:      var(--font-hanken), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ─── Custom typography utilities ───────────────────────────────────── */
+@layer utilities {
+  .text-display-lg {
+    font-size: 72px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 300;
+  }
+  .text-display-lg-mobile {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 300;
+  }
+  .text-headline-xl {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+  .text-headline-lg {
+    font-size: 32px;
+    line-height: 1.3;
+    font-weight: 400;
+  }
+  .text-body-lg {
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    font-weight: 300;
+  }
+  .text-body-md {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+  .text-label-caps {
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+  }
+
+  /* ─── Design component classes ─────────────────────────────────────── */
+  .refined-border {
+    border: 1px solid rgba(229, 226, 225, 0.15);
+  }
+  .avant-garde-hover {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .avant-garde-hover:hover {
+    background-color: #bc0000;
+    color: #ffffff;
+    border-color: transparent;
+  }
+  .section-fade {
+    mask-image: linear-gradient(to bottom, black 80%, transparent);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ─── Scrollbar ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 4px; }
+::-webkit-scrollbar-track  { background: #131313; }
+::-webkit-scrollbar-thumb  { background: #444748; }
+
+/* ─── Material Symbols ─────────────────────────────────────────────── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
 }

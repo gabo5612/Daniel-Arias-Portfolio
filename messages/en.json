@@ -1,0 +1,84 @@
+{
+  "Metadata": {
+    "title": "Daniel Arias — Virtuoso Cellist",
+    "description": "Portfolio of Daniel Arias, professional cellist. Concert bookings, media, and press assets."
+  },
+  "Nav": {
+    "artist": "THE ARTIST",
+    "media": "MEDIA",
+    "schedule": "SCHEDULE",
+    "bookings": "BOOKINGS",
+    "epk": "DOWNLOAD EPK"
+  },
+  "Hero": {
+    "tagline": "VIRTUOSO CELLIST",
+    "headline": "DANIEL ARIAS:",
+    "accent": "TECHNICAL RESILIENCE.",
+    "headline2": "TONAL MASTERY.",
+    "sub": "Redefining the cello through the lens of modern vanguardism and symphonic legacy.",
+    "cta1": "VIEW SCHEDULE",
+    "cta2": "BOOK A PERFORMANCE"
+  },
+  "Artist": {
+    "label": "01 // THE BIOGRAPHY",
+    "heading": "ENGINEERING SOUND",
+    "body1": "From the rigorous training grounds of El Sistema to the world's most prestigious concert halls, Daniel Arias has forged a path of technical stamina and uncompromising artistic vision. His approach to the cello is one of structural exposure—a raw, physical engagement with the instrument.",
+    "body2": "Specializing in the demanding repertoire of the 20th and 21st centuries, Arias is celebrated for his interpretations of Shostakovich, Lutosławski, and Xenakis. His performances are marked by a precision that rejects the decorative in favor of the essential.",
+    "cta": "FULL CV [2024]"
+  },
+  "Media": {
+    "label": "02 // MEDIA CORE",
+    "heading": "VISUAL STUDIES",
+    "archive": "ARCHIVE / NO. 88-24",
+    "img1Alt": "Cello Detail",
+    "img2Alt": "Performance Close-up",
+    "img3Alt": "Daniel Arias with Cello Case"
+  },
+  "Schedule": {
+    "label": "03 // UPCOMING FREQUENCIES",
+    "heading": "PERFORMANCE LOG",
+    "tickets": "TICKETS",
+    "events": [
+      {
+        "date": "OCT 14. 2024",
+        "venue": "BERLIN PHILHARMONIE",
+        "location": "BERLIN, GERMANY",
+        "program": "SHOSTAKOVICH: CELLO CONCERTO NO. 1, OP. 107"
+      },
+      {
+        "date": "NOV 02. 2024",
+        "venue": "THE CONCERTGEBOUW",
+        "location": "AMSTERDAM, NETHERLANDS",
+        "program": "LUTOSŁAWSKI: CELLO CONCERTO"
+      },
+      {
+        "date": "DEC 18. 2024",
+        "venue": "WALT DISNEY CONCERT HALL",
+        "location": "LOS ANGELES, USA",
+        "program": "BACH: THE SIX CELLO SUITES (COMPLETE)"
+      }
+    ]
+  },
+  "Bookings": {
+    "label": "CONNECT",
+    "heading": "BOOKINGS &",
+    "headingAccent": "INQUIRIES",
+    "body": "For global concert engagements, masterclasses, and collaborative projects, please contact management directly through the encrypted portal below.",
+    "cta1": "REACH OUT NOW",
+    "cta2": "TECH RIDER AVAILABLE",
+    "email": "booking@danielarias.com"
+  },
+  "Press": {
+    "heading": "PRESS ASSETS",
+    "body": "Comprehensive electronic press kit containing hi-res photography, complete biography, technical rider, and current repertoire list.",
+    "cta": "DOWNLOAD EPK (PDF)"
+  },
+  "Footer": {
+    "copyright": "© 2024 DANIEL ARIAS. ALL RIGHTS RESERVED.",
+    "system": "SYSTEM: AVANT-GARDE-REF-02.",
+    "instagram": "INSTAGRAM",
+    "youtube": "YOUTUBE",
+    "spotify": "SPOTIFY",
+    "pressKit": "PRESS KIT"
+  }
+}
