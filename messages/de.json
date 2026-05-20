@@ -1,0 +1,84 @@
+{
+  "Metadata": {
+    "title": "Daniel Arias — Virtuoser Cellist",
+    "description": "Portfolio von Daniel Arias, professioneller Cellist. Konzertbuchungen, Medien und Pressematerial."
+  },
+  "Nav": {
+    "artist": "DER KÜNSTLER",
+    "media": "MEDIEN",
+    "schedule": "PROGRAMM",
+    "bookings": "BUCHUNGEN",
+    "epk": "EPK HERUNTERLADEN"
+  },
+  "Hero": {
+    "tagline": "VIRTUOSER CELLIST",
+    "headline": "DANIEL ARIAS:",
+    "accent": "TECHNISCHE PRÄZISION.",
+    "headline2": "KLANGLICHE MEISTERSCHAFT.",
+    "sub": "Das Cello neu definieren — zwischen moderner Avantgarde und sinfonischem Erbe.",
+    "cta1": "PROGRAMM ANSEHEN",
+    "cta2": "KONZERT BUCHEN"
+  },
+  "Artist": {
+    "label": "01 // DIE BIOGRAFIE",
+    "heading": "KLANG GESTALTEN",
+    "body1": "Von den rigorosen Ausbildungsstätten von El Sistema bis zu den renommiertesten Konzertsälen der Welt hat Daniel Arias einen Weg technischer Ausdauer und kompromissloser künstlerischer Vision eingeschlagen. Seine Herangehensweise ans Cello ist strukturell entblößend — ein rohes, physisches Engagement mit dem Instrument.",
+    "body2": "Spezialisiert auf das anspruchsvolle Repertoire des 20. und 21. Jahrhunderts, wird Arias für seine Interpretationen von Schostakowitsch, Lutosławski und Xenakis gefeiert. Seine Auftritte zeichnen sich durch eine Präzision aus, die das Dekorative zugunsten des Wesentlichen ablehnt.",
+    "cta": "VOLLSTÄNDIGER LEBENSLAUF [2024]"
+  },
+  "Media": {
+    "label": "02 // VISUELLES ARCHIV",
+    "heading": "BILDSTUDIEN",
+    "archive": "ARCHIV / NR. 88-24",
+    "img1Alt": "Cello-Detail",
+    "img2Alt": "Aufnahme bei Auftritt",
+    "img3Alt": "Daniel Arias mit Cello-Koffer"
+  },
+  "Schedule": {
+    "label": "03 // KOMMENDE AUFTRITTE",
+    "heading": "AUFTRITTSKALENDER",
+    "tickets": "TICKETS",
+    "events": [
+      {
+        "date": "14. OKT. 2024",
+        "venue": "BERLINER PHILHARMONIE",
+        "location": "BERLIN, DEUTSCHLAND",
+        "program": "SCHOSTAKOWITSCH: CELLOKONZERT NR. 1, OP. 107"
+      },
+      {
+        "date": "02. NOV. 2024",
+        "venue": "THE CONCERTGEBOUW",
+        "location": "AMSTERDAM, NIEDERLANDE",
+        "program": "LUTOSŁAWSKI: CELLOKONZERT"
+      },
+      {
+        "date": "18. DEZ. 2024",
+        "venue": "WALT DISNEY CONCERT HALL",
+        "location": "LOS ANGELES, USA",
+        "program": "BACH: DIE SECHS CELLOSUITEN (VOLLSTÄNDIG)"
+      }
+    ]
+  },
+  "Bookings": {
+    "label": "KONTAKT",
+    "heading": "BUCHUNGEN &",
+    "headingAccent": "ANFRAGEN",
+    "body": "Für internationale Konzertengagements, Meisterkurse und kollaborative Projekte wenden Sie sich bitte direkt über das Portal unten an das Management.",
+    "cta1": "JETZT ANFRAGEN",
+    "cta2": "TECHNISCHER RIDER VERFÜGBAR",
+    "email": "booking@danielarias.com"
+  },
+  "Press": {
+    "heading": "PRESSEMATERIAL",
+    "body": "Umfassendes elektronisches Pressematerial mit hochauflösenden Fotos, vollständiger Biografie, technischem Rider und aktuellem Repertoireverzeichnis.",
+    "cta": "EPK HERUNTERLADEN (PDF)"
+  },
+  "Footer": {
+    "copyright": "© 2024 DANIEL ARIAS. ALLE RECHTE VORBEHALTEN.",
+    "system": "SYSTEM: AVANT-GARDE-REF-02.",
+    "instagram": "INSTAGRAM",
+    "youtube": "YOUTUBE",
+    "spotify": "SPOTIFY",
+    "pressKit": "PRESSEMAPPE"
+  }
+}

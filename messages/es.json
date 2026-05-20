@@ -1,0 +1,84 @@
+{
+  "Metadata": {
+    "title": "Daniel Arias — Violonchelista Virtuoso",
+    "description": "Portafolio de Daniel Arias, violonchelista profesional. Contrataciones, medios y materiales de prensa."
+  },
+  "Nav": {
+    "artist": "EL ARTISTA",
+    "media": "MEDIOS",
+    "schedule": "AGENDA",
+    "bookings": "CONTRATACIONES",
+    "epk": "DESCARGAR EPK"
+  },
+  "Hero": {
+    "tagline": "VIOLONCHELISTA VIRTUOSO",
+    "headline": "DANIEL ARIAS:",
+    "accent": "RIGOR TÉCNICO.",
+    "headline2": "DOMINIO TONAL.",
+    "sub": "Redefiniendo el violonchelo a través de la vanguardia moderna y el legado sinfónico.",
+    "cta1": "VER AGENDA",
+    "cta2": "CONTRATAR UNA ACTUACIÓN"
+  },
+  "Artist": {
+    "label": "01 // LA BIOGRAFÍA",
+    "heading": "INGENIERÍA DEL SONIDO",
+    "body1": "Desde los rigurosos campos de formación de El Sistema hasta las salas de concierto más prestigiosas del mundo, Daniel Arias ha forjado un camino de resistencia técnica y visión artística sin concesiones. Su aproximación al violonchelo es de exposición estructural: un compromiso físico y crudo con el instrumento.",
+    "body2": "Especializado en el exigente repertorio de los siglos XX y XXI, Arias es reconocido por sus interpretaciones de Shostakóvich, Lutosławski y Xenakis. Sus actuaciones se distinguen por una precisión que rechaza lo decorativo en favor de lo esencial.",
+    "cta": "CV COMPLETO [2024]"
+  },
+  "Media": {
+    "label": "02 // ARCHIVO VISUAL",
+    "heading": "ESTUDIOS VISUALES",
+    "archive": "ARCHIVO / NO. 88-24",
+    "img1Alt": "Detalle del Violonchelo",
+    "img2Alt": "Primer Plano en Actuación",
+    "img3Alt": "Daniel Arias con el Estuche del Violonchelo"
+  },
+  "Schedule": {
+    "label": "03 // PRÓXIMAS FRECUENCIAS",
+    "heading": "REGISTRO DE ACTUACIONES",
+    "tickets": "ENTRADAS",
+    "events": [
+      {
+        "date": "14 OCT. 2024",
+        "venue": "BERLINER PHILHARMONIE",
+        "location": "BERLÍN, ALEMANIA",
+        "program": "SHOSTAKÓVICH: CONCIERTO PARA VIOLONCHELO N.º 1, OP. 107"
+      },
+      {
+        "date": "02 NOV. 2024",
+        "venue": "THE CONCERTGEBOUW",
+        "location": "ÁMSTERDAM, PAÍSES BAJOS",
+        "program": "LUTOSŁAWSKI: CONCIERTO PARA VIOLONCHELO"
+      },
+      {
+        "date": "18 DIC. 2024",
+        "venue": "WALT DISNEY CONCERT HALL",
+        "location": "LOS ÁNGELES, EE. UU.",
+        "program": "BACH: LAS SEIS SUITES PARA VIOLONCHELO (COMPLETAS)"
+      }
+    ]
+  },
+  "Bookings": {
+    "label": "CONTACTO",
+    "heading": "CONTRATACIONES &",
+    "headingAccent": "CONSULTAS",
+    "body": "Para contrataciones de conciertos internacionales, clases magistrales y proyectos colaborativos, contacte a la representación directamente a través del portal a continuación.",
+    "cta1": "ESCRIBIR AHORA",
+    "cta2": "RIDER TÉCNICO DISPONIBLE",
+    "email": "booking@danielarias.com"
+  },
+  "Press": {
+    "heading": "MATERIALES DE PRENSA",
+    "body": "Kit de prensa electrónico completo con fotografías en alta resolución, biografía completa, rider técnico y lista de repertorio actualizada.",
+    "cta": "DESCARGAR EPK (PDF)"
+  },
+  "Footer": {
+    "copyright": "© 2024 DANIEL ARIAS. TODOS LOS DERECHOS RESERVADOS.",
+    "system": "SISTEMA: AVANT-GARDE-REF-02.",
+    "instagram": "INSTAGRAM",
+    "youtube": "YOUTUBE",
+    "spotify": "SPOTIFY",
+    "pressKit": "KIT DE PRENSA"
+  }
+}
