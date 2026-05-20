@@ -1,4 +1,5 @@
 import Image from "next/image";
+import biographyImg from "@/assets/biography.webp";
 import { getTranslations } from "next-intl/server";
 
 export default async function TheArtist() {
@@ -14,11 +15,10 @@ export default async function TheArtist() {
         <div className="relative group">
           <div className="absolute -inset-4 border border-outline-variant/20 -z-10 transition-transform duration-700 group-hover:translate-x-2 group-hover:translate-y-2" />
           <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6z_HEE7smSdJC-Kz70kK-buFJhqXRtbxm23b-P3DVC0jMbNgvF1xEBdB-RA5OxoMuPKjWtoF7mmMFBdT1BXkIpcrESMw_ne7A3110ADKnW5Zcygt0HEVzfZfdhLTraY_t6pRcAtvhzlGzi5ZqIVYbevG2Y-UVJeTOH_zM6-zCgrP4EbOfzVs8Jt8xs-v-g_o7IqV-g_X_H8gDJrSwO16QhqR1bQJSkRZjIWSwU-f4WZk2HoOZ_FRt2ojqzLbHCeDPBS0wA8BmqPi7"
+            src={biographyImg}
             alt="Daniel Arias Portrait"
-            width={800}
-            height={1000}
             className="w-full grayscale brightness-90 contrast-110"
+            placeholder="blur"
           />
         </div>
       </div>
