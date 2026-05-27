@@ -3,8 +3,6 @@ import { getTranslations } from "next-intl/server";
 import { galleryImages } from "@/assets/gallery";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-const icons = ["fullscreen", "play_circle", "fullscreen"];
-
 export default async function MediaGallery() {
   const t = await getTranslations("Media");
 
@@ -45,43 +43,67 @@ export default async function MediaGallery() {
         </ScrollReveal>
       </div>
 
-      {/* 3-column staggered grid */}
-      <div className="px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-12">
-        {galleryImages.map((img, i) => (
-          <ScrollReveal
-            key={i}
-            delay={(i % 3) * 100}
-            className={i % 3 === 1 ? "md:translate-y-24" : ""}
-          >
-            <div className="aspect-4/5 relative group overflow-hidden">
-              <Image
-                src={img}
-                alt={`Daniel Arias — photo ${i + 1}`}
-                fill
-                className="object-cover grayscale opacity-75 transition-all duration-1000 group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0"
-                placeholder="blur"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
+      {/* Vertical editorial gallery */}
+      <div className="px-margin-mobile md:px-margin-desktop space-y-20 md:space-y-32">
+        {galleryImages.map((img, i) => {
+          const isEven = i % 2 === 0;
+          return (
+            <ScrollReveal key={i} delay={80}>
+              <div
+                className={`relative flex flex-col md:flex-row items-center gap-8 ${
+                  isEven ? "md:flex-row" : "md:flex-row-reverse"
+                }`}
+              >
+                {/* Image — takes 68% width on desktop */}
+                <div className="w-full md:w-[68%] relative group overflow-hidden shrink-0">
+                  {/* Red top accent that extends on hover */}
+                  <div className="absolute top-0 left-0 w-0 h-0.5 bg-secondary-container group-hover:w-full transition-all duration-700 z-10" />
 
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-secondary-container/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
-                <span className="material-symbols-outlined text-4xl font-extralight text-on-surface/80">
-                  {icons[i % 3]}
-                </span>
+                  <div className="aspect-4/5 relative overflow-hidden">
+                    <Image
+                      src={img}
+                      alt={`Daniel Arias — photo ${i + 1}`}
+                      fill
+                      className="object-cover grayscale opacity-75 transition-all duration-1000 group-hover:scale-[1.03] group-hover:opacity-100 group-hover:grayscale-0"
+                      placeholder="blur"
+                      sizes="(max-width: 768px) 100vw, 68vw"
+                    />
+                    {/* Bottom caption overlay */}
+                    <div className="absolute inset-0 bg-linear-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                      <span className="font-label-caps text-[9px] text-secondary-fixed tracking-[0.3em] uppercase">
+                        DANIEL ARIAS — {String(i + 1).padStart(3, "0")}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Decorative number + index — the other 32% */}
+                <div
+                  className={`hidden md:flex flex-col flex-1 select-none pointer-events-none ${
+                    isEven ? "items-end text-right" : "items-start text-left"
+                  }`}
+                >
+                  <span
+                    className="font-display-lg uppercase leading-none text-on-surface font-light"
+                    style={{
+                      fontSize: "clamp(60px, 9vw, 160px)",
+                      opacity: 0.06,
+                    }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span
+                    className={`font-label-caps text-[9px] text-outline tracking-[0.3em] uppercase mt-4 ${
+                      isEven ? "border-r border-outline-variant/20 pr-4" : "border-l border-outline-variant/20 pl-4"
+                    }`}
+                  >
+                    FRAME {String(i + 1).padStart(3, "0")}
+                  </span>
+                </div>
               </div>
-
-              {/* Image number — top right */}
-              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="font-label-caps text-[9px] text-secondary-fixed tracking-[0.2em]">
-                  {String(i + 1).padStart(3, "0")}
-                </span>
-              </div>
-
-              {/* Red bottom accent */}
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-container group-hover:w-full transition-all duration-700" />
-            </div>
-          </ScrollReveal>
-        ))}
+            </ScrollReveal>
+          );
+        })}
       </div>
     </section>
   );

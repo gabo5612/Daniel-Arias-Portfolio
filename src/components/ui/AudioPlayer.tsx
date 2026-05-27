@@ -4,12 +4,17 @@ import { useEffect, useRef, useState } from "react";
 export default function AudioPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
-  const [muted, setMuted] = useState(false);
-  const [visible, setVisible] = useState(false);
+  const [muted, setMuted] = useState(true);
 
+  // Autoplay muted on mount — browsers allow this
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), 2000);
-    return () => clearTimeout(timer);
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.volume = 0.3;
+    audio.muted = true;
+    audio.play()
+      .then(() => setPlaying(true))
+      .catch(() => setPlaying(false));
   }, []);
 
   const togglePlay = () => {
@@ -19,7 +24,6 @@ export default function AudioPlayer() {
       audio.pause();
       setPlaying(false);
     } else {
-      audio.volume = 0.3;
       audio.play();
       setPlaying(true);
     }
@@ -28,27 +32,26 @@ export default function AudioPlayer() {
   const toggleMute = () => {
     const audio = audioRef.current;
     if (!audio) return;
-    audio.muted = !audio.muted;
-    setMuted(!muted);
+    const next = !muted;
+    audio.muted = next;
+    setMuted(next);
   };
 
   return (
-    <div
-      className={`fixed bottom-8 right-8 z-50 flex items-center gap-4 px-5 py-3 bg-surface-container-lowest/95 backdrop-blur-md refined-border transition-all duration-700 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-      }`}
-    >
-      <audio ref={audioRef} src="/background-music.mp3" loop preload="none" />
+    <div className="fixed bottom-8 right-8 z-50 flex items-center gap-4 px-5 py-3 bg-surface-container-lowest/95 backdrop-blur-md refined-border">
+      <audio ref={audioRef} src="/background-music.mp3" loop preload="auto" />
 
       {/* Waveform bars */}
-      <div className="flex items-end gap-[3px] h-4 w-8 shrink-0">
+      <div className="flex items-end gap-0.75 h-4 w-8 shrink-0">
         {[0, 1, 2, 3, 4].map((i) => (
           <div
             key={i}
-            className={`w-[2px] rounded-none bg-secondary-fixed/60 origin-bottom transition-all duration-300 ${
-              playing && !muted ? "audio-bar" : "h-[3px]"
+            className={`w-0.5 rounded-none origin-bottom transition-all duration-300 ${
+              playing && !muted
+                ? "audio-bar"
+                : "h-0.75 bg-secondary-fixed/40"
             }`}
-            style={{ animationDelay: `${i * 0.12}s` }}
+            style={playing && !muted ? { animationDelay: `${i * 0.12}s` } : undefined}
           />
         ))}
       </div>
@@ -57,9 +60,21 @@ export default function AudioPlayer() {
         AMBIENT SCORE
       </span>
 
+      {/* Muted hint — invites user to unmute */}
+      {playing && muted && (
+        <button
+          onClick={toggleMute}
+          aria-label="Unmute ambient music"
+          className="font-label-caps text-[9px] tracking-[0.15em] uppercase text-secondary-fixed hover:text-on-surface transition-colors cursor-pointer animate-pulse"
+        >
+          UNMUTE
+        </button>
+      )}
+
+      {/* Play/Pause */}
       <button
         onClick={togglePlay}
-        aria-label={playing ? "Pause music" : "Play ambient music"}
+        aria-label={playing ? "Pause" : "Play ambient music"}
         className="text-on-surface-variant hover:text-secondary-fixed transition-colors cursor-pointer"
       >
         <span className="material-symbols-outlined text-[18px]">
@@ -67,15 +82,14 @@ export default function AudioPlayer() {
         </span>
       </button>
 
-      {playing && (
+      {/* Mute toggle — shown when playing and unmuted */}
+      {playing && !muted && (
         <button
           onClick={toggleMute}
-          aria-label={muted ? "Unmute" : "Mute"}
+          aria-label="Mute"
           className="text-on-surface-variant hover:text-secondary-fixed transition-colors cursor-pointer"
         >
-          <span className="material-symbols-outlined text-[18px]">
-            {muted ? "volume_off" : "volume_up"}
-          </span>
+          <span className="material-symbols-outlined text-[18px]">volume_up</span>
         </button>
       )}
     </div>

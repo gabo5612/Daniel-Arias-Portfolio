@@ -1,24 +1,35 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { useRouter, usePathname } from "@/navigation";
+
+const locales = ["en", "es", "de"] as const;
 
 export default function Nav() {
   const t = useTranslations("Nav");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
-      const scrolled = window.scrollY;
+      const sy = window.scrollY;
       const total = document.documentElement.scrollHeight - window.innerHeight;
-      setScrollProgress(total > 0 ? (scrolled / total) * 100 : 0);
-      setScrolled(scrolled > 60);
+      setScrollProgress(total > 0 ? (sy / total) * 100 : 0);
+      setScrolled(sy > 60);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const switchLocale = (next: (typeof locales)[number]) => {
+    router.replace(pathname, { locale: next });
+  };
 
   return (
     <nav
@@ -28,7 +39,7 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      {/* Red scroll progress bar */}
+      {/* Scroll progress bar */}
       <div className="absolute bottom-0 left-0 w-full h-px bg-outline-variant/10">
         <div
           className="h-full bg-secondary-container transition-none"
@@ -40,8 +51,8 @@ export default function Nav() {
         DANIEL ARIAS
       </div>
 
-      {/* Desktop nav */}
-      <div className="hidden md:flex gap-12 items-center">
+      {/* Desktop: nav links + locale switcher + EPK */}
+      <div className="hidden md:flex gap-10 items-center">
         {(["artist", "media", "schedule", "bookings"] as const).map((key) => (
           <a
             key={key}
@@ -51,6 +62,25 @@ export default function Nav() {
             {t(key)}
           </a>
         ))}
+
+        {/* Language switcher */}
+        <div className="flex items-center gap-2 ml-4 border-l border-outline-variant/30 pl-8">
+          {locales.map((l, i) => (
+            <span key={l} className="flex items-center gap-2">
+              {i > 0 && <span className="text-outline-variant/40 text-[10px]">·</span>}
+              <button
+                onClick={() => switchLocale(l)}
+                className={`font-label-caps text-[10px] tracking-[0.2em] uppercase transition-colors duration-200 cursor-pointer ${
+                  l === locale
+                    ? "text-secondary-fixed"
+                    : "text-outline hover:text-on-surface-variant"
+                }`}
+              >
+                {l.toUpperCase()}
+              </button>
+            </span>
+          ))}
+        </div>
       </div>
 
       <button className="hidden md:block font-label-caps text-label-caps px-8 py-3 refined-border uppercase tracking-widest avant-garde-hover cursor-pointer">
@@ -81,6 +111,22 @@ export default function Nav() {
               {t(key)}
             </a>
           ))}
+
+          {/* Mobile locale switcher */}
+          <div className="flex items-center gap-4 pt-4 border-t border-outline-variant/20">
+            {locales.map((l) => (
+              <button
+                key={l}
+                onClick={() => { switchLocale(l); setMenuOpen(false); }}
+                className={`font-label-caps text-[10px] tracking-[0.2em] uppercase cursor-pointer ${
+                  l === locale ? "text-secondary-fixed" : "text-outline"
+                }`}
+              >
+                {l.toUpperCase()}
+              </button>
+            ))}
+          </div>
+
           <button className="font-label-caps text-label-caps px-8 py-3 refined-border uppercase tracking-widest avant-garde-hover self-start cursor-pointer">
             {t("epk")}
           </button>
