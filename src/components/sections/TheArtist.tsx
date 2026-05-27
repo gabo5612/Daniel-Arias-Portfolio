@@ -34,6 +34,7 @@ export default async function TheArtist() {
         <div className="space-y-8 text-on-surface-variant font-light leading-loose text-lg">
           <p>{t("body1")}</p>
           <p>{t("body2")}</p>
+          <p>{t("body3")}</p>
         </div>
         <div className="mt-16">
           <button className="font-label-caps text-label-caps px-12 py-5 refined-border uppercase tracking-widest text-on-surface avant-garde-hover">

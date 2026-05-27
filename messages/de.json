@@ -8,7 +8,7 @@
     "media": "MEDIEN",
     "schedule": "PROGRAMM",
     "bookings": "BUCHUNGEN",
-    "epk": "EPK HERUNTERLADEN"
+    "epk": "RESUME HERUNTERLADEN"
   },
   "Hero": {
     "tagline": "VIRTUOSER CELLIST",
@@ -20,14 +20,14 @@
     "cta2": "KONZERT BUCHEN"
   },
   "Artist": {
-    "label": "01 // DIE BIOGRAFIE",
+    "label": "DIE BIOGRAFIE",
     "heading": "KLANG GESTALTEN",
     "body1": "Von den rigorosen Ausbildungsstätten von El Sistema bis zu den renommiertesten Konzertsälen der Welt hat Daniel Arias einen Weg technischer Ausdauer und kompromissloser künstlerischer Vision eingeschlagen. Seine Herangehensweise ans Cello ist strukturell entblößend — ein rohes, physisches Engagement mit dem Instrument.",
     "body2": "Spezialisiert auf das anspruchsvolle Repertoire des 20. und 21. Jahrhunderts, wird Arias für seine Interpretationen von Schostakowitsch, Lutosławski und Xenakis gefeiert. Seine Auftritte zeichnen sich durch eine Präzision aus, die das Dekorative zugunsten des Wesentlichen ablehnt.",
     "cta": "VOLLSTÄNDIGER LEBENSLAUF [2024]"
   },
   "Media": {
-    "label": "02 // VISUELLES ARCHIV",
+    "label": "VISUELLES ARCHIV",
     "heading": "BILDSTUDIEN",
     "archive": "ARCHIV / NR. 88-24",
     "img1Alt": "Cello-Detail",
@@ -35,7 +35,7 @@
     "img3Alt": "Daniel Arias mit Cello-Koffer"
   },
   "Schedule": {
-    "label": "03 // KOMMENDE AUFTRITTE",
+    "label": "KOMMENDE AUFTRITTE",
     "heading": "AUFTRITTSKALENDER",
     "tickets": "TICKETS",
     "events": [
@@ -66,16 +66,16 @@
     "body": "Für internationale Konzertengagements, Meisterkurse und kollaborative Projekte wenden Sie sich bitte direkt über das Portal unten an das Management.",
     "cta1": "JETZT ANFRAGEN",
     "cta2": "TECHNISCHER RIDER VERFÜGBAR",
-    "email": "booking@danielarias.com"
+    "email": "Danielariascello@gmail.com"
   },
   "Press": {
     "heading": "PRESSEMATERIAL",
     "body": "Umfassendes elektronisches Pressematerial mit hochauflösenden Fotos, vollständiger Biografie, technischem Rider und aktuellem Repertoireverzeichnis.",
-    "cta": "EPK HERUNTERLADEN (PDF)"
+    "cta": "RESUME HERUNTERLADEN (PDF)"
   },
   "Footer": {
-    "copyright": "© 2024 DANIEL ARIAS. ALLE RECHTE VORBEHALTEN.",
-    "system": "SYSTEM: AVANT-GARDE-REF-02.",
+    "copyright": "© 2026 DANIEL ARIAS. ALLE RECHTE VORBEHALTEN.",
+    "system": "Built with Love By Gabriel Arias",
     "instagram": "INSTAGRAM",
     "youtube": "YOUTUBE",
     "spotify": "SPOTIFY",

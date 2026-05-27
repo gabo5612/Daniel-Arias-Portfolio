@@ -1,6 +1,6 @@
 {
   "Metadata": {
-    "title": "Daniel Arias — Virtuoso Cellist",
+    "title": "Daniel Arias — Cellist",
     "description": "Portfolio of Daniel Arias, professional cellist. Concert bookings, media, and press assets."
   },
   "Nav": {
@@ -8,10 +8,10 @@
     "media": "MEDIA",
     "schedule": "SCHEDULE",
     "bookings": "BOOKINGS",
-    "epk": "DOWNLOAD EPK"
+    "epk": "DOWNLOAD RESUME"
   },
   "Hero": {
-    "tagline": "VIRTUOSO CELLIST",
+    "tagline": "CELLIST",
     "headline": "DANIEL ARIAS:",
     "accent": "TECHNICAL RESILIENCE.",
     "headline2": "TONAL MASTERY.",
@@ -20,22 +20,22 @@
     "cta2": "BOOK A PERFORMANCE"
   },
   "Artist": {
-    "label": "01 // THE BIOGRAPHY",
+    "label": "BIOGRAPHY",
     "heading": "ENGINEERING SOUND",
-    "body1": "From the rigorous training grounds of El Sistema to the world's most prestigious concert halls, Daniel Arias has forged a path of technical stamina and uncompromising artistic vision. His approach to the cello is one of structural exposure—a raw, physical engagement with the instrument.",
-    "body2": "Specializing in the demanding repertoire of the 20th and 21st centuries, Arias is celebrated for his interpretations of Shostakovich, Lutosławski, and Xenakis. His performances are marked by a precision that rejects the decorative in favor of the essential.",
-    "cta": "FULL CV [2024]"
+    "body1": "Daniel Arias is a Venezuelan cellist based in Europe, internationally recognized as a soloist, chamber musician, and stage artist. Trained through El Sistema and further refined in France and Germany, he has performed in major venues across Europe, the Americas, and Asia alongside renowned musicians and international orchestras.",
+    "body2": "Known for the emotional intensity of his performances and his charismatic stage presence, Daniel Arias blends the tradition of classical music with a contemporary artistic vision, bringing the cello closer to new generations and audiences around the world.",
+     "body3": "And this is just the beginning of his journey."
   },
   "Media": {
-    "label": "02 // MEDIA CORE",
+    "label": "MEDIA GALLERY",
     "heading": "VISUAL STUDIES",
-    "archive": "ARCHIVE / NO. 88-24",
+    "archive": "GALLERY ARCHIVE",
     "img1Alt": "Cello Detail",
     "img2Alt": "Performance Close-up",
     "img3Alt": "Daniel Arias with Cello Case"
   },
   "Schedule": {
-    "label": "03 // UPCOMING FREQUENCIES",
+    "label": "UPCOMING FREQUENCIES",
     "heading": "PERFORMANCE LOG",
     "tickets": "TICKETS",
     "events": [
@@ -66,16 +66,16 @@
     "body": "For global concert engagements, masterclasses, and collaborative projects, please contact management directly through the encrypted portal below.",
     "cta1": "REACH OUT NOW",
     "cta2": "TECH RIDER AVAILABLE",
-    "email": "booking@danielarias.com"
+    "email": "Danielariascello@gmail.com"
   },
   "Press": {
     "heading": "PRESS ASSETS",
     "body": "Comprehensive electronic press kit containing hi-res photography, complete biography, technical rider, and current repertoire list.",
-    "cta": "DOWNLOAD EPK (PDF)"
+    "cta": "DOWNLOAD RESUME"
   },
   "Footer": {
-    "copyright": "© 2024 DANIEL ARIAS. ALL RIGHTS RESERVED.",
-    "system": "SYSTEM: AVANT-GARDE-REF-02.",
+    "copyright": "© 2026 DANIEL ARIAS. ALL RIGHTS RESERVED.",
+    "system": "Built with Love By Gabriel Arias",
     "instagram": "INSTAGRAM",
     "youtube": "YOUTUBE",
     "spotify": "SPOTIFY",

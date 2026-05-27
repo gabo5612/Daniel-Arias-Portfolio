@@ -8,7 +8,7 @@
     "media": "MEDIOS",
     "schedule": "AGENDA",
     "bookings": "CONTRATACIONES",
-    "epk": "DESCARGAR EPK"
+    "epk": "DESCARGAR RESUME"
   },
   "Hero": {
     "tagline": "VIOLONCHELISTA VIRTUOSO",
@@ -20,14 +20,14 @@
     "cta2": "CONTRATAR UNA ACTUACIÓN"
   },
   "Artist": {
-    "label": "01 // LA BIOGRAFÍA",
+    "label": "LA BIOGRAFÍA",
     "heading": "INGENIERÍA DEL SONIDO",
     "body1": "Desde los rigurosos campos de formación de El Sistema hasta las salas de concierto más prestigiosas del mundo, Daniel Arias ha forjado un camino de resistencia técnica y visión artística sin concesiones. Su aproximación al violonchelo es de exposición estructural: un compromiso físico y crudo con el instrumento.",
     "body2": "Especializado en el exigente repertorio de los siglos XX y XXI, Arias es reconocido por sus interpretaciones de Shostakóvich, Lutosławski y Xenakis. Sus actuaciones se distinguen por una precisión que rechaza lo decorativo en favor de lo esencial.",
     "cta": "CV COMPLETO [2024]"
   },
   "Media": {
-    "label": "02 // ARCHIVO VISUAL",
+    "label": "ARCHIVO VISUAL",
     "heading": "ESTUDIOS VISUALES",
     "archive": "ARCHIVO / NO. 88-24",
     "img1Alt": "Detalle del Violonchelo",
@@ -35,7 +35,7 @@
     "img3Alt": "Daniel Arias con el Estuche del Violonchelo"
   },
   "Schedule": {
-    "label": "03 // PRÓXIMAS FRECUENCIAS",
+    "label": "PRÓXIMAS PRESENTACIONES",
     "heading": "REGISTRO DE ACTUACIONES",
     "tickets": "ENTRADAS",
     "events": [
@@ -66,16 +66,16 @@
     "body": "Para contrataciones de conciertos internacionales, clases magistrales y proyectos colaborativos, contacte a la representación directamente a través del portal a continuación.",
     "cta1": "ESCRIBIR AHORA",
     "cta2": "RIDER TÉCNICO DISPONIBLE",
-    "email": "booking@danielarias.com"
+    "email": "Danielariascello@gmail.com"
   },
   "Press": {
     "heading": "MATERIALES DE PRENSA",
     "body": "Kit de prensa electrónico completo con fotografías en alta resolución, biografía completa, rider técnico y lista de repertorio actualizada.",
-    "cta": "DESCARGAR EPK (PDF)"
+    "cta": "DESCARGAR RESUME"
   },
   "Footer": {
-    "copyright": "© 2024 DANIEL ARIAS. TODOS LOS DERECHOS RESERVADOS.",
-    "system": "SISTEMA: AVANT-GARDE-REF-02.",
+    "copyright": "© 2026 DANIEL ARIAS. TODOS LOS DERECHOS RESERVADOS.",
+    "system": "Built with Love By Gabriel Arias",
     "instagram": "INSTAGRAM",
     "youtube": "YOUTUBE",
     "spotify": "SPOTIFY",
