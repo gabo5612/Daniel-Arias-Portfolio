@@ -7,6 +7,7 @@ import MediaGallery from "@/components/sections/MediaGallery";
 import PerformanceSchedule from "@/components/sections/PerformanceSchedule";
 import BookingsCTA from "@/components/sections/BookingsCTA";
 import PressAssets from "@/components/sections/PressAssets";
+import AudioPlayer from "@/components/ui/AudioPlayer";
 
 export default async function Page({
   params,
@@ -28,6 +29,7 @@ export default async function Page({
         <PressAssets />
       </main>
       <Footer />
+      <AudioPlayer />
     </>
   );
 }
