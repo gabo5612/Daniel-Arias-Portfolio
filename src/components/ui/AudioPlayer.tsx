@@ -6,15 +6,37 @@ export default function AudioPlayer() {
   const [playing, setPlaying] = useState(false);
   const [muted, setMuted] = useState(true);
 
-  // Autoplay muted on mount — browsers allow this
+  // On mount: play muted (autoplay safe) OR unmuted if user came from splash
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
     audio.volume = 0.3;
-    audio.muted = true;
-    audio.play()
+
+    const alreadyEnabled = sessionStorage.getItem("audioEnabled") === "true";
+    audio.muted = !alreadyEnabled;
+    setMuted(!alreadyEnabled);
+
+    audio
+      .play()
       .then(() => setPlaying(true))
       .catch(() => setPlaying(false));
+  }, []);
+
+  // Listen for splash lang-selected event (synchronous user gesture chain)
+  useEffect(() => {
+    const onLangSelected = () => {
+      const audio = audioRef.current;
+      if (!audio) return;
+      audio.muted = false;
+      setMuted(false);
+      if (audio.paused) {
+        audio.play().then(() => setPlaying(true)).catch(() => {});
+      } else {
+        setPlaying(true);
+      }
+    };
+    window.addEventListener("lang-selected", onLangSelected);
+    return () => window.removeEventListener("lang-selected", onLangSelected);
   }, []);
 
   const togglePlay = () => {
@@ -47,9 +69,7 @@ export default function AudioPlayer() {
           <div
             key={i}
             className={`w-0.5 rounded-none origin-bottom transition-all duration-300 ${
-              playing && !muted
-                ? "audio-bar"
-                : "h-0.75 bg-secondary-fixed/40"
+              playing && !muted ? "audio-bar" : "h-0.75 bg-secondary-fixed/40"
             }`}
             style={playing && !muted ? { animationDelay: `${i * 0.12}s` } : undefined}
           />
@@ -60,7 +80,7 @@ export default function AudioPlayer() {
         AMBIENT SCORE
       </span>
 
-      {/* Muted hint — invites user to unmute */}
+      {/* Muted: show pulsing UNMUTE prompt */}
       {playing && muted && (
         <button
           onClick={toggleMute}
@@ -71,7 +91,7 @@ export default function AudioPlayer() {
         </button>
       )}
 
-      {/* Play/Pause */}
+      {/* Play / Pause */}
       <button
         onClick={togglePlay}
         aria-label={playing ? "Pause" : "Play ambient music"}
@@ -82,7 +102,7 @@ export default function AudioPlayer() {
         </span>
       </button>
 
-      {/* Mute toggle — shown when playing and unmuted */}
+      {/* Volume when playing and unmuted */}
       {playing && !muted && (
         <button
           onClick={toggleMute}

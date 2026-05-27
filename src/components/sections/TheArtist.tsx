@@ -60,6 +60,7 @@ export default async function TheArtist() {
           <div className="space-y-8 text-on-surface-variant font-light leading-loose text-lg">
             <p>{t("body1")}</p>
             <p>{t("body2")}</p>
+            <p className="text-on-surface-variant/60 italic">{t("body3")}</p>
           </div>
         </ScrollReveal>
 

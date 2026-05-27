@@ -8,6 +8,7 @@ import PerformanceSchedule from "@/components/sections/PerformanceSchedule";
 import BookingsCTA from "@/components/sections/BookingsCTA";
 import PressAssets from "@/components/sections/PressAssets";
 import AudioPlayer from "@/components/ui/AudioPlayer";
+import LangSplash from "@/components/ui/LangSplash";
 
 export default async function Page({
   params,
@@ -30,6 +31,7 @@ export default async function Page({
       </main>
       <Footer />
       <AudioPlayer />
+      <LangSplash />
     </>
   );
 }
