@@ -14,31 +14,39 @@ export default function Footer() {
           <p className="font-label-caps text-[10px] text-outline leading-loose tracking-[0.2em] uppercase">
             {t("copyright")}
             <br />
-            {t("system")}
+            <a
+              href="https://www.linkedin.com/in/gabriel-oniel-arias/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-on-surface-variant hover:text-secondary-fixed transition-colors"
+            >
+              {t("system")}
+            </a>
           </p>
         </div>
         <div className="flex flex-col md:items-end gap-16">
           <div className="flex flex-wrap gap-12 font-label-caps text-[11px] tracking-[0.2em] uppercase">
             <a
-              href="#"
+              href="https://www.instagram.com/danielariascello/"
               className="text-on-surface-variant hover:text-secondary-fixed transition-colors"
             >
               {t("instagram")}
             </a>
             <a
-              href="#"
+              href="https://www.youtube.com/@danielariascello"
               className="text-on-surface-variant hover:text-secondary-fixed transition-colors"
             >
               {t("youtube")}
             </a>
             <a
-              href="#"
+              href="mailto:danielariascello@gmail.com"
               className="text-on-surface-variant hover:text-secondary-fixed transition-colors"
             >
-              {t("spotify")}
+              {t("email")}
             </a>
             <a
-              href="#"
+              href="/assets/Press_kit.zip"
+              download
               className="text-on-surface-variant hover:text-secondary-fixed transition-colors"
             >
               {t("pressKit")}
