@@ -59,6 +59,13 @@
   --spacing-margin-mobile:      24px;
 }
 
+/* ─── Mobile spacing overrides ──────────────────────────────────────── */
+@media (max-width: 767px) {
+  :root {
+    --spacing-section-gap: 55px;
+  }
+}
+
 /* ─── Font families linked to CSS vars injected by next/font/google ─── */
 @theme inline {
   --font-display-lg:   var(--font-bodoni), serif;
@@ -137,6 +144,10 @@
   .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+  .reveal-fast {
+    transition-duration: 0.45s, 0.45s;
+    transform: translateY(20px);
   }
 
   /* ─── Hero text entrance ────────────────────────────────────────────── */

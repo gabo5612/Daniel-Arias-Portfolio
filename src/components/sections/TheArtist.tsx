@@ -2,10 +2,29 @@
 import Image from "next/image";
 import biographyImg from "@/assets/biography.webp";
 import { useTranslations } from "next-intl";
+import { useRef, useEffect, useState } from "react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function TheArtist() {
   const t = useTranslations("Artist");
+  const [revealed, setRevealed] = useState(false);
+  const imgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = imgRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          observer.unobserve(el);
+        }
+      },
+      { rootMargin: "-30% 0px -30% 0px", threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
@@ -24,14 +43,16 @@ export default function TheArtist() {
 
       {/* Portrait */}
       <ScrollReveal className="md:col-span-6 mb-16 md:mb-0">
-        <div className="relative group">
+        <div ref={imgRef} className="relative group">
           {/* Red top accent line — expands on hover */}
           <div className="absolute -top-px left-0 w-0 h-px bg-secondary-container transition-all duration-700 group-hover:w-full z-10" />
           <div className="absolute -inset-4 border border-outline-variant/15 -z-10 transition-transform duration-700 group-hover:translate-x-3 group-hover:translate-y-3" />
           <Image
             src={biographyImg}
             alt="Daniel Arias Portrait"
-            className="w-full grayscale brightness-85 contrast-110 transition-all duration-1000 group-hover:grayscale-0 group-hover:brightness-100"
+            className={`w-full contrast-110 transition-all duration-1000 group-hover:grayscale-0 group-hover:brightness-100 ${
+              revealed ? "grayscale-0 brightness-100" : "grayscale brightness-85"
+            }`}
             placeholder="blur"
           />
           {/* Bottom caption on hover */}

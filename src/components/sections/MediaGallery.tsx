@@ -1,8 +1,8 @@
 "use client";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { galleryImages } from "@/assets/gallery";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import GalleryImage from "@/components/ui/GalleryImage";
 
 export default function MediaGallery() {
   const t = useTranslations("Media");
@@ -49,7 +49,7 @@ export default function MediaGallery() {
         {galleryImages.map((img, i) => {
           const isEven = i % 2 === 0;
           return (
-            <ScrollReveal key={i} delay={80}>
+            <ScrollReveal key={i} delay={80} fast>
               <div
                 className={`relative flex flex-col md:flex-row items-center gap-8 ${
                   isEven ? "md:flex-row" : "md:flex-row-reverse"
@@ -60,22 +60,7 @@ export default function MediaGallery() {
                   {/* Red top accent that extends on hover */}
                   <div className="absolute top-0 left-0 w-0 h-0.5 bg-secondary-container group-hover:w-full transition-all duration-700 z-10" />
 
-                  <div className="aspect-4/5 relative overflow-hidden">
-                    <Image
-                      src={img}
-                      alt={`Daniel Arias — photo ${i + 1}`}
-                      fill
-                      className="object-cover grayscale opacity-75 transition-all duration-1000 group-hover:scale-[1.03] group-hover:opacity-100 group-hover:grayscale-0"
-                      placeholder="blur"
-                      sizes="(max-width: 768px) 100vw, 68vw"
-                    />
-                    {/* Bottom caption overlay */}
-                    <div className="absolute inset-0 bg-linear-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                      <span className="font-label-caps text-[9px] text-secondary-fixed tracking-[0.3em] uppercase">
-                        DANIEL ARIAS — {String(i + 1).padStart(3, "0")}
-                      </span>
-                    </div>
-                  </div>
+                  <GalleryImage src={img} alt={`Daniel Arias — photo ${i + 1}`} index={i} />
                 </div>
 
                 {/* Decorative number + index — the other 32% */}

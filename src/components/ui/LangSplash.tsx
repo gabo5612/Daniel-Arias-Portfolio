@@ -66,7 +66,7 @@ export default function LangSplash() {
       </video>
 
       {/* Same gradient overlay as Hero */}
-      <div className="absolute inset-0 bg-linear-to-b from-background/80 via-background/20 to-background/90" />
+      <div className="absolute inset-0 bg-linear-to-b from-background/97 via-background/95 to-background/97" />
 
       {/* Red accent lines */}
       <div className="absolute top-0 left-0 w-full h-px bg-secondary-container/50" />

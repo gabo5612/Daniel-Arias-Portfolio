@@ -5,9 +5,10 @@ interface Props {
   children: React.ReactNode;
   className?: string;
   delay?: number;
+  fast?: boolean;
 }
 
-export default function ScrollReveal({ children, className = "", delay = 0 }: Props) {
+export default function ScrollReveal({ children, className = "", delay = 0, fast = false }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,7 +30,7 @@ export default function ScrollReveal({ children, className = "", delay = 0 }: Pr
   }, [delay]);
 
   return (
-    <div ref={ref} className={`reveal ${className}`}>
+    <div ref={ref} className={`reveal ${fast ? "reveal-fast" : ""} ${className}`}>
       {children}
     </div>
   );
