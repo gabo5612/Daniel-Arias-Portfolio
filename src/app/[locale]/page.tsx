@@ -9,6 +9,7 @@ import BookingsCTA from "@/components/sections/BookingsCTA";
 import PressAssets from "@/components/sections/PressAssets";
 import AudioPlayer from "@/components/ui/AudioPlayer";
 import LangSplash from "@/components/ui/LangSplash";
+import ContentFade from "@/components/ui/ContentFade";
 
 export default async function Page({
   params,
@@ -21,15 +22,17 @@ export default async function Page({
   return (
     <>
       <Nav />
-      <main>
-        <Hero />
-        <TheArtist />
-        <MediaGallery />
-        <PerformanceSchedule />
-        <BookingsCTA />
-        <PressAssets />
-      </main>
-      <Footer />
+      <ContentFade>
+        <main>
+          <Hero />
+          <TheArtist />
+          <MediaGallery />
+          <PerformanceSchedule />
+          <BookingsCTA />
+          <PressAssets />
+        </main>
+        <Footer />
+      </ContentFade>
       <AudioPlayer />
       <LangSplash />
     </>

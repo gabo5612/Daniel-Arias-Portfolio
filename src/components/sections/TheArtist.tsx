@@ -1,10 +1,11 @@
+"use client";
 import Image from "next/image";
 import biographyImg from "@/assets/biography.webp";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-export default async function TheArtist() {
-  const t = await getTranslations("Artist");
+export default function TheArtist() {
+  const t = useTranslations("Artist");
 
   return (
     <section

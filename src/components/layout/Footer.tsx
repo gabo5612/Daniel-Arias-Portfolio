@@ -1,7 +1,8 @@
-import { getTranslations } from "next-intl/server";
+"use client";
+import { useTranslations } from "next-intl";
 
-export default async function Footer() {
-  const t = await getTranslations("Footer");
+export default function Footer() {
+  const t = useTranslations("Footer");
 
   return (
     <footer className="px-margin-mobile md:px-margin-desktop py-24 bg-surface-container-lowest border-t border-outline-variant/30">
@@ -44,8 +45,8 @@ export default async function Footer() {
             </a>
           </div>
           <div className="flex gap-1">
-            <div className="w-16 h-[1px] bg-secondary-fixed/50"></div>
-            <div className="w-8 h-[1px] bg-outline-variant/30"></div>
+            <div className="w-16 h-px bg-secondary-fixed/50"></div>
+            <div className="w-8 h-px bg-outline-variant/30"></div>
           </div>
         </div>
       </div>

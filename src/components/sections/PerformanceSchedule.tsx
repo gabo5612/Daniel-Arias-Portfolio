@@ -1,8 +1,9 @@
-import { getTranslations } from "next-intl/server";
+"use client";
+import { useTranslations } from "next-intl";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-export default async function PerformanceSchedule() {
-  const t = await getTranslations("Schedule");
+export default function PerformanceSchedule() {
+  const t = useTranslations("Schedule");
 
   const events = [
     {

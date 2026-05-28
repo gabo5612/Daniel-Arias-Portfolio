@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "@/navigation";
+import { useLocaleSwitch } from "@/contexts/LocaleContext";
 
 const languages = [
   { code: "en", label: "ENGLISH" },
@@ -11,19 +11,21 @@ const languages = [
 
 export default function LangSplash() {
   const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
+  const { changeLocale } = useLocaleSwitch();
 
   // Start SHOWN so it covers the page from the very first render (no content flash)
   const [shown, setShown] = useState(true);
   const [fadingOut, setFadingOut] = useState(false);
 
   useEffect(() => {
-    // Returning visitor — hide instantly with no transition
     if (sessionStorage.getItem("splashDone")) {
       setShown(false);
+    } else {
+      document.body.style.overflow = "hidden";
     }
-    // First visitor — splash is already visible, nothing to do
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, []);
 
   const handleSelect = (code: string) => {
@@ -35,11 +37,12 @@ export default function LangSplash() {
     // Fade out the overlay
     setFadingOut(true);
 
+    // Change locale client-side (no navigation)
+    changeLocale(code as "en" | "es" | "de");
+
     setTimeout(() => {
+      document.body.style.overflow = "";
       setShown(false);
-      if (code !== locale) {
-        router.replace(pathname, { locale: code as "en" | "es" | "de" });
-      }
     }, 800);
   };
 
@@ -47,7 +50,7 @@ export default function LangSplash() {
 
   return (
     <div
-      className={`fixed inset-0 z-[200] overflow-hidden transition-opacity duration-700 ${
+      className={`fixed inset-0 z-200 overflow-hidden transition-opacity duration-700 ${
         fadingOut ? "opacity-0" : "opacity-100"
       }`}
     >

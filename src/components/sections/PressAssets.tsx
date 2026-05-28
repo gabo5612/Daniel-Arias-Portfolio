@@ -1,8 +1,9 @@
-import { getTranslations } from "next-intl/server";
+"use client";
+import { useTranslations } from "next-intl";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-export default async function PressAssets() {
-  const t = await getTranslations("Press");
+export default function PressAssets() {
+  const t = useTranslations("Press");
 
   return (
     <section className="py-section-gap px-margin-mobile md:px-margin-desktop">

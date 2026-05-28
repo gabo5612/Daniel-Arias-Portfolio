@@ -1,9 +1,10 @@
-import { getTranslations } from "next-intl/server";
+"use client";
+import { useTranslations } from "next-intl";
 
 const TICKER = "TECHNICAL RESILIENCE — TONAL MASTERY — VIRTUOSO CELLIST — CONCERT ENGAGEMENTS 2024–25 — ENGINEERING SOUND — ";
 
-export default async function Hero() {
-  const t = await getTranslations("Hero");
+export default function Hero() {
+  const t = useTranslations("Hero");
 
   return (
     <section className="min-h-screen flex flex-col justify-between px-margin-mobile md:px-margin-desktop relative overflow-hidden">

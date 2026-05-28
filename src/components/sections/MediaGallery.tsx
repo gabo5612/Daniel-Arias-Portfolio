@@ -1,10 +1,11 @@
+"use client";
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 import { galleryImages } from "@/assets/gallery";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-export default async function MediaGallery() {
-  const t = await getTranslations("Media");
+export default function MediaGallery() {
+  const t = useTranslations("Media");
 
   return (
     <section

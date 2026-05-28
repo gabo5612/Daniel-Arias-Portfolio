@@ -2,15 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { useRouter, usePathname } from "@/navigation";
+import { useLocaleSwitch } from "@/contexts/LocaleContext";
 
 const locales = ["en", "es", "de"] as const;
 
 export default function Nav() {
   const t = useTranslations("Nav");
   const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
+  const { changeLocale } = useLocaleSwitch();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -28,7 +27,7 @@ export default function Nav() {
   }, []);
 
   const switchLocale = (next: (typeof locales)[number]) => {
-    router.replace(pathname, { locale: next });
+    changeLocale(next);
   };
 
   return (

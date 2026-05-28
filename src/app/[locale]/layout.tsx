@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
-import { setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import { LocaleProvider } from "@/contexts/LocaleContext";
+import enMessages from "../../../messages/en.json";
+import esMessages from "../../../messages/es.json";
+import deMessages from "../../../messages/de.json";
+
+const allMessages = { en: enMessages, es: esMessages, de: deMessages };
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -44,11 +49,20 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
+  // Load initial locale messages for SSR — prevents hydration mismatch
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      {children}
+    // Server-side provider: covers SSR + initial hydration with correct locale
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      {/* Client-side provider: adds a new NextIntlClientProvider only when
+          the user switches locale client-side (needsOverride pattern) */}
+      <LocaleProvider
+        initialLocale={locale as "en" | "es" | "de"}
+        allMessages={allMessages}
+      >
+        {children}
+      </LocaleProvider>
     </NextIntlClientProvider>
   );
 }
