@@ -38,27 +38,7 @@
   "Schedule": {
     "label": "UPCOMING FREQUENCIES",
     "heading": "PERFORMANCE LOG",
-    "tickets": "TICKETS",
-    "events": [
-      {
-        "date": "OCT 14. 2024",
-        "venue": "BERLIN PHILHARMONIE",
-        "location": "BERLIN, GERMANY",
-        "program": "SHOSTAKOVICH: CELLO CONCERTO NO. 1, OP. 107"
-      },
-      {
-        "date": "NOV 02. 2024",
-        "venue": "THE CONCERTGEBOUW",
-        "location": "AMSTERDAM, NETHERLANDS",
-        "program": "LUTOSŁAWSKI: CELLO CONCERTO"
-      },
-      {
-        "date": "DEC 18. 2024",
-        "venue": "WALT DISNEY CONCERT HALL",
-        "location": "LOS ANGELES, USA",
-        "program": "BACH: THE SIX CELLO SUITES (COMPLETE)"
-      }
-    ]
+    "tickets": "TICKETS"
   },
   "Bookings": {
     "label": "CONNECT",
@@ -71,8 +51,8 @@
   },
   "Press": {
     "heading": "PRESS ASSETS",
-    "body": "Comprehensive electronic press kit containing hi-res photography, complete biography, technical rider, and current repertoire list.",
-    "cta": "DOWNLOAD RESUME"
+    "body": "Comprehensive electronic press kit containing hi-res photography",
+    "cta": "Download Press Kit"
   },
   "Footer": {
     "copyright": "© 2026 DANIEL ARIAS. ALL RIGHTS RESERVED.",

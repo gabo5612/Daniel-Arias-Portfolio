@@ -1,6 +1,6 @@
 {
   "Metadata": {
-    "title": "Daniel Arias — Violonchelista Virtuoso",
+    "title": "Daniel Arias — Violonchelista",
     "description": "Portafolio de Daniel Arias, violonchelista profesional. Contrataciones, medios y materiales de prensa."
   },
   "Nav": {
@@ -11,7 +11,7 @@
     "epk": "DESCARGAR RESUME"
   },
   "Hero": {
-    "tagline": "VIOLONCHELISTA VIRTUOSO",
+    "tagline": "VIOLONCHELISTA",
     "headline": "DANIEL ARIAS:",
     "accent": "RIGOR TÉCNICO.",
     "headline2": "DOMINIO TONAL.",
@@ -38,41 +38,21 @@
   "Schedule": {
     "label": "PRÓXIMAS PRESENTACIONES",
     "heading": "REGISTRO DE ACTUACIONES",
-    "tickets": "ENTRADAS",
-    "events": [
-      {
-        "date": "14 OCT. 2024",
-        "venue": "BERLINER PHILHARMONIE",
-        "location": "BERLÍN, ALEMANIA",
-        "program": "SHOSTAKÓVICH: CONCIERTO PARA VIOLONCHELO N.º 1, OP. 107"
-      },
-      {
-        "date": "02 NOV. 2024",
-        "venue": "THE CONCERTGEBOUW",
-        "location": "ÁMSTERDAM, PAÍSES BAJOS",
-        "program": "LUTOSŁAWSKI: CONCIERTO PARA VIOLONCHELO"
-      },
-      {
-        "date": "18 DIC. 2024",
-        "venue": "WALT DISNEY CONCERT HALL",
-        "location": "LOS ÁNGELES, EE. UU.",
-        "program": "BACH: LAS SEIS SUITES PARA VIOLONCHELO (COMPLETAS)"
-      }
-    ]
+    "tickets": "ENTRADAS"
   },
   "Bookings": {
     "label": "CONTACTO",
     "heading": "CONTRATACIONES &",
     "headingAccent": "CONSULTAS",
-    "body": "Para contrataciones, conciertos internacionales, clases magistrales y proyectos colaborativos,  puedes ponerte en contacto",
+    "body": "Para contrataciones, conciertos internacionales, clases magistrales y proyectos colaborativos, puedes ponerte en contacto",
     "cta1": "ESCRIBIR AHORA",
     "cta2": "RIDER TÉCNICO DISPONIBLE",
     "email": "Danielariascello@gmail.com"
   },
   "Press": {
     "heading": "MATERIALES DE PRENSA",
-    "body": "Kit de prensa electrónico completo con fotografías en alta resolución, biografía completa, rider técnico y lista de repertorio actualizada.",
-    "cta": "DESCARGAR RESUME"
+    "body": "Kit de prensa electrónico completo con fotografías en alta resolución.",
+    "cta": "DESCARGAR KIT DE PRENSA"
   },
   "Footer": {
     "copyright": "© 2026 DANIEL ARIAS. TODOS LOS DERECHOS RESERVADOS.",

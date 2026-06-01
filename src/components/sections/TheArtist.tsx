@@ -88,9 +88,11 @@ export default function TheArtist() {
 
         <ScrollReveal delay={500}>
           <div className="mt-16 flex items-center gap-8">
+            {/* 
             <button className="font-label-caps text-label-caps px-12 py-5 refined-border uppercase tracking-widest text-on-surface avant-garde-hover cursor-pointer">
               {t("cta")}
             </button>
+            */}
             <div className="flex-1 h-px bg-linear-to-r from-secondary-container/40 to-transparent hidden sm:block" />
           </div>
         </ScrollReveal>

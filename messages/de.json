@@ -1,6 +1,6 @@
 {
   "Metadata": {
-    "title": "Daniel Arias — Virtuoser Cellist",
+    "title": "Daniel Arias — Cellist",
     "description": "Portfolio von Daniel Arias, professioneller Cellist. Konzertbuchungen, Medien und Pressematerial."
   },
   "Nav": {
@@ -11,7 +11,7 @@
     "epk": "RESUME HERUNTERLADEN"
   },
   "Hero": {
-    "tagline": "VIRTUOSER CELLIST",
+    "tagline": "CELLIST",
     "headline": "DANIEL ARIAS:",
     "accent": "TECHNISCHE PRÄZISION.",
     "headline2": "KLANGLICHE MEISTERSCHAFT.",
@@ -38,27 +38,7 @@
   "Schedule": {
     "label": "KOMMENDE AUFTRITTE",
     "heading": "AUFTRITTSKALENDER",
-    "tickets": "TICKETS",
-    "events": [
-      {
-        "date": "14. OKT. 2024",
-        "venue": "BERLINER PHILHARMONIE",
-        "location": "BERLIN, DEUTSCHLAND",
-        "program": "SCHOSTAKOWITSCH: CELLOKONZERT NR. 1, OP. 107"
-      },
-      {
-        "date": "02. NOV. 2024",
-        "venue": "THE CONCERTGEBOUW",
-        "location": "AMSTERDAM, NIEDERLANDE",
-        "program": "LUTOSŁAWSKI: CELLOKONZERT"
-      },
-      {
-        "date": "18. DEZ. 2024",
-        "venue": "WALT DISNEY CONCERT HALL",
-        "location": "LOS ANGELES, USA",
-        "program": "BACH: DIE SECHS CELLOSUITEN (VOLLSTÄNDIG)"
-      }
-    ]
+    "tickets": "TICKETS"
   },
   "Bookings": {
     "label": "KONTAKT",
@@ -71,8 +51,8 @@
   },
   "Press": {
     "heading": "PRESSEMATERIAL",
-    "body": "Umfassendes elektronisches Pressematerial mit hochauflösenden Fotos, vollständiger Biografie, technischem Rider und aktuellem Repertoireverzeichnis.",
-    "cta": "RESUME HERUNTERLADEN (PDF)"
+    "body": "Vollständige elektronische Pressemappe mit hochauflösenden Fotos.",
+    "cta": "Pressemappe herunterladen"
   },
   "Footer": {
     "copyright": "© 2026 DANIEL ARIAS. ALLE RECHTE VORBEHALTEN.",

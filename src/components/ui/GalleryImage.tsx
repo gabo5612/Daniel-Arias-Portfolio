@@ -25,7 +25,7 @@ export default function GalleryImage({
           observer.unobserve(el); // stays revealed once visible
         }
       },
-      { threshold: 0.9 }
+      { threshold: 0.5 }
     );
     observer.observe(el);
     return () => observer.disconnect();

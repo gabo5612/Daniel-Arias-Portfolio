@@ -81,11 +81,11 @@ export default function Nav() {
           ))}
         </div>
       </div>
-
+          {/* *
       <button className="hidden md:block font-label-caps text-label-caps px-8 py-3 refined-border uppercase tracking-widest avant-garde-hover cursor-pointer">
         {t("epk")}
       </button>
-
+            / Desktop EPK button  --- IGNORE ---}
       {/* Mobile hamburger */}
       <button
         className="md:hidden cursor-pointer"
@@ -125,10 +125,11 @@ export default function Nav() {
               </button>
             ))}
           </div>
-
+            {/*}
           <button className="font-label-caps text-label-caps px-8 py-3 refined-border uppercase tracking-widest avant-garde-hover self-start cursor-pointer">
             {t("epk")}
           </button>
+            */}
         </div>
       )}
     </nav>
