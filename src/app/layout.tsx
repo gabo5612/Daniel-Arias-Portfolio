@@ -21,6 +21,23 @@ export const metadata: Metadata = {
   title: "Daniel Arias — Virtuoso Cellist",
   description:
     "Portfolio of Daniel Arias, professional cellist. Concert bookings, media, and press assets.",
+  metadataBase: new URL("https://danielariascello.com"),
+  openGraph: {
+    title: "Daniel Arias — Cellist",
+    description:
+      "Portfolio of Daniel Arias, professional cellist. Concert bookings, media, and press assets.",
+    url: "https://danielariascello.com",
+    siteName: "Daniel Arias",
+    images: [{ url: "/logo.png" }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Daniel Arias — Cellist",
+    description:
+      "Portfolio of Daniel Arias, professional cellist. Concert bookings, media, and press assets.",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({
