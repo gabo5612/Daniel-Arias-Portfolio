@@ -54,11 +54,11 @@ export default function PerformanceSchedule() {
               </div>
 
               <div className="md:col-span-2 flex justify-end items-center">
-                    {/* Event list 
-                <button className="font-label-caps text-[11px] px-8 py-3 refined-border uppercase avant-garde-hover tracking-widest cursor-pointer">
-                  {t("tickets")}
-                </button>
-                */}
+                   <a href={show.map} target="_blank" rel="noopener noreferrer">
+                    <button className="font-label-caps text-[11px] px-8 py-3 refined-border uppercase avant-garde-hover tracking-widest cursor-pointer">
+                      {t("location")}
+                    </button>
+                  </a>
               </div>
             </div>
           </ScrollReveal>

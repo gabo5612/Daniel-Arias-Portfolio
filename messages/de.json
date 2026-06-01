@@ -38,7 +38,7 @@
   "Schedule": {
     "label": "KOMMENDE AUFTRITTE",
     "heading": "AUFTRITTSKALENDER",
-    "tickets": "TICKETS"
+    "location": "STANDORT"
   },
   "Bookings": {
     "label": "KONTAKT",

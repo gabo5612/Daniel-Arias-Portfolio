@@ -1,7 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 
-const TICKER = "TECHNICAL RESILIENCE — TONAL MASTERY — VIRTUOSO CELLIST — CONCERT ENGAGEMENTS 2024–25 — ENGINEERING SOUND — ";
+const TICKER = "TECHNICAL RESILIENCE — TONAL MASTERY — CELLIST — CONCERT ENGAGEMENTS 2024–27 — ENGINEERING SOUND — ";
 
 export default function Hero() {
   const t = useTranslations("Hero");
