@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bodoni_Moda, Hanken_Grotesk } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 
 const bodoniModa = Bodoni_Moda({
@@ -30,10 +31,11 @@ export default function RootLayout({
       lang="en"
       className={`${bodoniModa.variable} ${hankenGrotesk.variable}`}
     >
+      <GoogleTagManager gtmId="GTM-NFVKRT32" />
       <head>
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
         />
       </head>
       <body className="bg-background text-on-surface font-body-md overflow-x-hidden antialiased">
