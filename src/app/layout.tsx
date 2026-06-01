@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bodoni_Moda, Hanken_Grotesk } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const bodoniModa = Bodoni_Moda({
@@ -38,6 +39,7 @@ export default function RootLayout({
       </head>
       <body className="bg-background text-on-surface font-body-md overflow-x-hidden antialiased">
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
