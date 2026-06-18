@@ -57,14 +57,18 @@ export default function BookingsCTA() {
               >
                 {t("cta1")}
               </a>
+              {/* CV link styled as a label 
               <div className="flex items-center gap-5 px-4">
                 <span className="material-symbols-outlined text-secondary-fixed/70 font-light text-xl">
                   description
                 </span>
+                {/* CV link styled as a label 
                 <span className="font-label-caps text-[10px] text-on-surface-variant tracking-[0.2em]">
                   {t("cta2")}
                 </span>
+                
               </div>
+              */}
             </div>
           </ScrollReveal>
         </div>
